@@ -3,12 +3,13 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const blogList = require("./data")
+// const http = require("http");
 
 app.use(bodyParser.json());
 app.use(cors());
 
 // define port
-const port = 3000;
+const port = process.env.port || 3000;
 
 app.get('/', (req, res) => {
     res.send("This is the Homepage");
