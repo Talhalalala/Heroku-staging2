@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // define port
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.send("This is the Homepage");
